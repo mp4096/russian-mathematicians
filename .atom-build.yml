@@ -1,0 +1,4 @@
+cmd: make quick
+name: Compile
+sh: true,
+cwd: "{PROJECT_PATH}"
