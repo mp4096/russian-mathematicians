@@ -6,6 +6,7 @@ __pycache__
 
 maps/*.html
 maps/*.png
+img/*.jpg
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
