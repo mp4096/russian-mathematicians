@@ -1,4 +1,4 @@
-\documentclass[ngerman]{beamer}
+\documentclass[11pt, ngerman]{beamer}
 
 \usepackage[utf8]{inputenc}
 \usepackage{babel}
@@ -16,6 +16,19 @@
 }
 \usepackage{pgfplots}
 \usepackage{FiraSans}
+
+\usepackage{siunitx}
+
+
+\sisetup{
+  locale                = DE,
+  detect-all            = true,
+  per-mode              = symbol,
+  binary-units          = true,
+  retain-zero-exponent  = true,
+  exponent-product      = \cdot,
+}
+
 
 \pgfplotsset{compat=newest}
 
