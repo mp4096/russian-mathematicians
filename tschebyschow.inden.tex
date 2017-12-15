@@ -1,0 +1,189 @@
+# section: Pafnutij Tschebyschow
+
+# frame:
+  # frametitle: Vita
+  # columns:
+    # column {0.4 \textwidth}:
+      \includegraphics[width = \linewidth]{img/tschebyschow}
+    # column {0.6 \textwidth}:
+      $*$ 16. Mai 1821 in Akatowo
+
+      # vspace: 12 pt
+
+      $\dagger$ 8. Dezember 1894 in St. Petersburg
+
+# frame:
+  # frametitle: Vita
+
+  # center:
+    \includegraphics[height = 7.5 cm]{maps/akatovo}
+
+# frame:
+  # frametitle: Vita
+    # itemize:
+      \item[1832 (11)] Umzug nach Moskau
+      \item[1837 (16)] Studiumbeginn an der Königlichen Moskauer Universität
+      \item[1841 (20)] Studiumabschluss
+      \item[1847 (26)] Adjunktprofessor an der Königlichen St. Petersburger Universität
+      \item[1850 (29)] Ordinarius an der Königlichen St. Petersburger Universität
+      \item[1858 (37)] Ordentliches Mitglied der St. Petersburger Akademie der Wissenschaften
+
+# frame:
+  # frametitle: Wissenschaftlicher Ansatz
+    \emph{\glqq{}Die Annäherung der Theorie und Praxis ergibt die wohltuendsten Ergebnisse,
+    und es ist nicht nur die Praxis, die davon profitiert:
+    die Wissenschaften selbst entwickeln sich unter ihrem Einfluss:
+    [die Praxis] eröffnet für [die Wissenschaften] neue Gegenstände der Forschungs
+    bzw. neue Facetten in längst bekannten Gegenständen\grqq}
+
+# frame:
+  # frametitle: Errungenschaften in der Zahlentheorie
+
+  Beweis der schwächeren Form des Primzahlsatzes:
+  # equation*:
+    \num{0.92129} \leqslant \frac{\pi(x)}{\frac{x}{\ln x}} \leqslant \num{1.10555}
+
+  (für hinreichend große $x$)
+
+  # vspace: 12 pt
+
+  Darüber hinaus Arbeiten zur diophantischen Approximation,
+  analytischen Zahlentheorie usw.
+
+# frame:
+  # frametitle: Errungenschaften in der Wahrscheinlichkeitstheorie
+
+  Tschebyschow-Ungleichung: Sei $x$ eine Zufallsvariable mit
+  $\text{E}(x) =: \mu$ und $\text{Var}(x) =: \sigma^2$. Dann gilt:
+  # equation*:
+    \text{Pr}\!\left( | x - \mu | \geqslant a \right) \leqslant \frac{\sigma^2}{a^2},
+    \ a > 0
+  % Fun fact: Let x be normally distributed. Then, Chebyshev inequality bounds the probability
+  % of 3 sigma by ca. 11 %, whereas it's less than 0.3 % analytically.
+
+  # vspace: 12 pt
+
+  Darüber hinaus Beiträge zur Momentenmethode, zum Gesetz der großen Zahlen
+  sowie zu den zentralen Grenzwertsätzen.
+
+# frame:
+  # frametitle: Errungenschaften in der Approximationstheorie
+
+  Fragestellung:
+  Was ist die beste Approximation $f(x)$ der Funktion $g(x)$ auf dem Intervall $[a, b]$, wenn
+  # equation*:
+    d(f, g) = \max_{x \in [a, b]} | f(x) - g(x) |
+  als Metrik benutzt wird?
+
+  ObdA kann man daraus die Frage herleiten,
+  welche Funktion $f(x)$ auf dem Intervall $[-1, 1]$ die geringste Abweichung von Null hat.
+
+  Wird die Funktion $f(x)$ auf Polynome mit Leitkoeffizienten 1 eingeschränkt,
+  so stellen skalierte Tschebyschow-Polynome 1.~Art die Lösung dieses Problems dar.
+
+# frame:
+  # frametitle: Errungenschaften in der Approximationstheorie
+  \centering
+  # tikzpicture [x = 5 cm, y = 2 cm]:
+    \draw[-latex] (-1.1, 0) -- (1.1, 0) node[right] {$x$};
+    \draw[-latex] (0, -1.3) -- (0, 1.3) node[above] {$T_n(x)$};
+
+    \begin{scope}[thick, domain = -1:1, smooth, variable=\x, samples = 50]
+      \draw[TolDarkPurple] plot(\x, 1.0);
+      \draw[TolDarkBlue] plot(\x, \x);
+      \draw[TolLightBlue] plot(\x, {2 * \x * \x - 1});
+      \draw[TolLightGreen] plot(\x, {4 * \x * \x * \x - 3 * \x});
+      \draw[TolDarkGreen] plot(\x, {8 * \x * \x * \x * \x - 8 * \x * \x + 1});
+      \draw[TolDarkBrown] plot(\x, {16 * \x * \x * \x * \x * \x - 20 * \x * \x * \x + 5 * \x});
+    \end{scope}
+
+    \draw (-1, 0) +(0, 0.75 mm) -- +(0, -0.75 mm) node[below] {\num{-1}};
+    \draw (1, 0) +(0, 0.75 mm) -- +(0, -0.75 mm) node[below] {\num{1}};
+    \draw (0, -1) +(0.75 mm, 0) -- +(-0.75 mm, 0) node[below left] {\num{-1}};
+    \draw (0, 1) +(0.75 mm, 0) -- +(-0.75 mm, 0) node[above left] {\num{1}};
+
+# frame:
+  # frametitle: Errungenschaften in der Approximationstheorie
+
+  Anwendungen:
+  # itemize:
+    * Tschebyschow-Filter 1. und 2. Art
+    * \texttt{chebfun} von Z. Battles und N. Trefethen
+      (Nullstellensuche, Lösen von partiellen DGLn, numerische Integration uvm.)
+    * Tschebyschow-Iteration fürs Lösen von linearen Gleichungssystemen
+    * Als Ansatzfunktionen für Spektralmethode
+    * Kollegenmatrix als Speziallfall von Genossenmatrizen
+    * \ldots
+
+# frame:
+  # frametitle: Errungenschaften in der Analysis und Geometrie
+
+  Orthogonale Polynome: Erfinder von Tschebyschow- und Hermite-Polynomen.
+  % Pierre-Simon Laplace in 1810
+  % Pafnuty Chebyshev in 1859
+  % Charles Hermite in 1864
+
+  # vspace: 12 pt
+
+  Tschebyschow-Ungleichung:
+  Falls $a_1 \geqslant a_2 \geqslant \ldots \geqslant a_n$ und
+  $b_1 \geqslant b_2 \geqslant \ldots \geqslant b_n$, dann gilt:
+  # equation*:
+    \frac{1}{n} \sum_{i = 1}^n a_i b_i
+    \geqslant
+    \left( \frac{1}{n} \sum_{i = 1}^n a_i \right)
+    \left( \frac{1}{n} \sum_{i = 1}^n b_i \right)
+
+# frame:
+  # frametitle: Errungenschaften in der angewandten Mathematik
+
+  Beiträge zur Differentialgeometrie (Tschebyschow-Netze) inspiriert von der Textiltechnik:
+  \glqq Über Schneiden von Kleidung\grqq\ (1878).
+
+  # vspace: 12 pt
+
+  Seit 1855 Mitglied des Artilleriekomitees des Kriegsministeriums,
+  Arbeit an ballistischen Formeln für das Militär.
+
+# frame:
+  # frametitle: Errungenschaften in der Getriebelehre
+
+  Gründer der St. Petersburger Schule der Getriebelehre.
+
+  # vspace: 12 pt
+
+  Erfinder des Tschebyschow-Parallelogramms sowie des Tschebyschow-Lambda-Mechanismus.
+
+# frame:
+  # frametitle: Errungenschaften in der Getriebelehre
+
+  # center:
+    \includegraphics[height = 6.5 cm]{img/fliehkraftregler}
+
+# frame:
+  # frametitle: Errungenschaften in der Getriebelehre
+
+  # center:
+    \includegraphics[height = 6.5 cm]{img/gehmaschine}
+
+# frame:
+  # frametitle: Bekannte Schüler
+
+  # columns:
+    # column {0.5 \textwidth}:
+      # itemize:
+        * A. W. Wassiljew
+        * G. F. \textbf{Voronoi}
+        * D. A. Grawe
+        * J. I. Solotarjow
+        * A. N. Korkin
+        * D. A. Latschinow
+        * A. M. \textbf{Ljapunow}
+    # column {0.5 \textwidth}:
+      # itemize:
+        * A. A. \textbf{Markow}
+        * K. A. Posse
+        * I. L. Ptaschitskij
+        * P. O. Somow
+        * J. W. Sokhotskij
+        * M. A. Tikhomandritskij
