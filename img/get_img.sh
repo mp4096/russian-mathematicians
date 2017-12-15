@@ -15,3 +15,13 @@ curl \
 curl \
   https://upload.wikimedia.org/wikipedia/commons/7/70/AAMarkov.jpg \
   -o markow.jpg
+
+# Krylow
+curl \
+  https://upload.wikimedia.org/wikipedia/commons/e/e1/Alexey_Krylov_1910s.JPG \
+  -o krylow.jpg
+
+# Ljapunow
+curl \
+  https://upload.wikimedia.org/wikipedia/commons/1/1c/Aleksandr_Lyapunov.jpg \
+  -o ljapunow.jpg
