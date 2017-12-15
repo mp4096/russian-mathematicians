@@ -138,7 +138,7 @@
     \draw[-latex] (-1.1, 0) -- (1.1, 0) node[right] {$x$};
     \draw[-latex] (0, -1.3) -- (0, 1.3) node[above] {$T_n(x)$};
 
-    \begin{scope}[thick, domain = -1:1, smooth, variable=\x, samples = 200]
+    \begin{scope}[thick, domain = -1:1, smooth, variable=\x, samples = 50]
       \draw[TolDarkPurple] plot(\x, 1.0);
       \draw[TolDarkBlue] plot(\x, \x);
       \draw[TolLightBlue] plot(\x, {2 * \x * \x - 1});
