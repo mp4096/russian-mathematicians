@@ -65,41 +65,6 @@
     * Tschebyschow-Markow-Stieltjes-Ungleichung
 
 # frame:
-  # frametitle: Markow-Kette
-  \centering
-  # tikzpicture:
-      \node[
-        state,
-        text = white,
-        draw = none,
-        fill = mDarkTeal,
-        ]
-        (s)
-        {Sunny};
-      \node[
-        state,
-        right = 3 cm of s,
-        text = white,
-        draw = none,
-        fill = mDarkTeal,
-        ]
-        (r)
-        {Rainy};
-
-      \draw[
-        every loop,
-        auto = right,
-        line width = 1mm,
-        >=latex,
-        draw = TolDarkBrown,
-        fill = TolDarkBrown,
-        ]
-        (s) edge[bend right, auto = left] node {0.6} (r)
-        (r) edge[bend right, auto = right] node {0.7} (s)
-        (s) edge[loop above] node {0.4} (s)
-        (r) edge[loop above] node {0.3} (r);
-
-# frame:
   # frametitle: Markow-Ungleichung
 
   Markow veröffentlichte im Jahre 1889 die Ungleichung für $k = 1$;
@@ -117,3 +82,79 @@
     \prod_{i = 1}^{k}
     \frac{\left( n^2 - (i - 1)^2 \right)}{( 2i - 1 )}
     \max_{x \in [-1, 1]} |P(x)|
+
+# frame:
+  # frametitle: Markow-Kette
+  \centering
+  # tikzpicture:
+    \node[
+      state,
+      text = white,
+      draw = none,
+      fill = mDarkTeal,
+      ]
+      (s)
+      {Sonne};
+    \node[
+      state,
+      right = 3 cm of s,
+      text = white,
+      draw = none,
+      fill = mDarkTeal,
+      ]
+      (r)
+      {Regen};
+
+    \draw[
+      every loop,
+      auto = right,
+      line width = 1mm,
+      >=latex,
+      draw = TolDarkBrown,
+      fill = TolDarkBrown,
+      ]
+      (s) edge[bend right, auto = left] node {0.4} (r)
+      (r) edge[bend right, auto = right] node {0.7} (s)
+      (s) edge[loop above] node {0.6} (s)
+      (r) edge[loop above] node {0.3} (r);
+
+# frame:
+  # frametitle: Markow-Ketten für Textgenerierung
+  \texttt{%
+    Denn für dieses Leben ist der Mensch nicht schlau genug.
+    Niemals merkt er eben diesen Lug und Trug.%
+  }
+
+  # itemize:
+    * \texttt{("Denn", "für")} $\rightarrow$ \texttt{"dieses"}
+    * \texttt{("für", "dieses")} $\rightarrow$ \texttt{"Leben"}
+    * \texttt{("dieses", "Leben")} $\rightarrow$ \texttt{"{}ist"}
+    * \texttt{("Leben", "{}ist")} $\rightarrow$ \texttt{"der"}
+    * \texttt{("{}ist", "der")} $\rightarrow$ \texttt{"Mensch"}
+    * \texttt{("der", "Mensch")} $\rightarrow$ \texttt{"nicht"}
+
+# frame:
+  # frametitle: Markow-Ketten für Textgenerierung
+  \emph{%
+    \glqq
+    \ldots [dem] Publikum ist schließlich interessant zu wissen,
+    dass der Christusglaube das Abendland überlebt hat,
+    in der Bayerischen Wirtschaft Präsident der Technischen Universität München,
+    mittendrin! Was wir heute alleine in Weihenstephan auf den Dreieinigen Gott
+    kommt es auf das Zusammenspiel aller Stimmen an, genauso wie in einer erfolgreichen Universität.
+    Das gelingt freilich nur, wenn man sich gegenseitig hört. Wie oft und intensiv haben sie, hier wie
+    dort, ihren eigenen Part geübt, um schließlich das Team zu bereichern! Loyalität im besten Sinne.%
+    \grqq
+  }
+
+# frame:
+  # frametitle: Markow-Ketten für Textgenerierung
+  \emph{%
+    \glqq
+    Jeder Euro zählt in seiner Konsequenz von Martin Luther noch einmal zurück:
+    Denn Richard Wagner hat es seit Haber und Bosch (1918 bzw. 1931)
+    Nobelpreise für Durchbrüche in der Musik. Mit ihr werden wir Martin Luther sein
+    und passt zu Garching, weil Naturwissenschaft und Technik immer wieder
+    überraschend hoffnungsvollen gnädigen Welt!%
+    \grqq
+  }
