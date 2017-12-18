@@ -21,6 +21,10 @@ curl \
   https://upload.wikimedia.org/wikipedia/commons/e/e1/Alexey_Krylov_1910s.JPG \
   -o krylow.jpg
 
+curl \
+  http://ff1.mosfont.ru/photo/00/32/36/32360.jpg \
+  -o azneft.jpg
+
 # Ljapunow
 curl \
   https://upload.wikimedia.org/wikipedia/commons/1/1c/Aleksandr_Lyapunov.jpg \
