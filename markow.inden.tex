@@ -121,17 +121,25 @@
 # frame:
   # frametitle: Markow-Ketten für Textgenerierung
   \texttt{%
-    Denn für dieses Leben ist der Mensch nicht schlau genug.
-    Niemals merkt er eben diesen Lug und Trug.%
+    Sein Kugelschreiber ist rot. Mein Kugelschreiber ist blau.%
   }
 
   # itemize:
-    * \texttt{("Denn", "für")} $\rightarrow$ \texttt{"dieses"}
-    * \texttt{("für", "dieses")} $\rightarrow$ \texttt{"Leben"}
-    * \texttt{("dieses", "Leben")} $\rightarrow$ \texttt{"{}ist"}
-    * \texttt{("Leben", "{}ist")} $\rightarrow$ \texttt{"der"}
-    * \texttt{("{}ist", "der")} $\rightarrow$ \texttt{"Mensch"}
-    * \texttt{("der", "Mensch")} $\rightarrow$ \texttt{"nicht"}
+    * \texttt{("{}Sein", "Kugelschreiber")} $\rightarrow$ \texttt{"{}ist"}
+    * \texttt{("Kugelschreiber", "{}ist")} $\rightarrow$ \texttt{"rot."}
+    * \texttt{("{}ist", "rot.")} $\rightarrow$ \texttt{"Mein"}
+    * \texttt{("rot.", "Mein")} $\rightarrow$ \texttt{"Kugelschreiber"}
+    * \texttt{("Mein", "Kugelschreiber")} $\rightarrow$ \texttt{"{}ist"}
+    * \texttt{("Kugelschreiber", "{}ist")} $\rightarrow$ \texttt{"blau."}
+
+# frame:
+  # frametitle: Markow-Ketten für Textgenerierung
+  # itemize:
+    * \texttt{("{}ist", "rot.")} $\rightarrow$ \texttt{\{("Mein", 1.0)\}}
+    * \texttt{("Kugelschreiber", "{}ist")} $\rightarrow$ \texttt{\{("rot.", 0.5), ("blau.", 0.5)\}}
+    * \texttt{("Mein", "Kugelschreiber")} $\rightarrow$ \texttt{\{"{(}ist", 1.0)\}}
+    * \texttt{("rot.", "Mein")} $\rightarrow$ \texttt{\{("Kugelschreiber", 1.0)\}}
+    * \texttt{("{}Sein", "Kugelschreiber")} $\rightarrow$ \texttt{\{"{(}ist", 1.0)\}}
 
 # frame:
   # frametitle: Markow-Ketten für Textgenerierung
