@@ -29,3 +29,7 @@ curl \
 curl \
   https://upload.wikimedia.org/wikipedia/commons/1/1c/Aleksandr_Lyapunov.jpg \
   -o ljapunow.jpg
+
+curl \
+  https://upload.wikimedia.org/wikipedia/commons/a/a0/Zirconzity.jpg \
+  -o fraktal.jpg
