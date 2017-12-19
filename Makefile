@@ -10,9 +10,9 @@ quick:
 final: clear
 	indentex . -v
 	pdflatex --interaction=batchmode $(ROOTFILE).tex
-	bibtex $(ROOTFILE).aux
+	# bibtex $(ROOTFILE).aux
 	pdflatex --interaction=batchmode $(ROOTFILE).tex
-	bibtex $(ROOTFILE).aux
+	# bibtex $(ROOTFILE).aux
 	pdflatex --interaction=batchmode $(ROOTFILE).tex
 	xdg-open $(ROOTFILE).pdf
 
@@ -32,6 +32,8 @@ clean:
 	find . -type f -name '*.blg' -delete
 	find . -type f -name '*.out' -delete
 	find . -type f -name '*.log' -delete
+	find . -type f -name '*.snm' -delete
+	find . -type f -name '*.nav' -delete
 	find . -type f -name '*.1' -delete
 	find . -type f -name '*.mp' -delete
 	find . -type f -name '*.synctex.gz' -delete
