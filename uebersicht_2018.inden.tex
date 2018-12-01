@@ -1,0 +1,58 @@
+# section: Übersicht
+
+# frame:
+  # frametitle: Übersicht
+
+  Heute geht es um drei prominente Moskauer Mathematiker:
+  # itemize:
+    * Andrei Nikolajewitsch \textbf{Kolmogorow}
+    *  \textbf{}
+    *  \textbf{}
+    *  \textbf{}
+
+  Vielleicht nächstes Mal: Moskauer Mathematiker, z.B.
+  Lusin, Aleksandrow, Pontrjagin, Kotelnikow, Kolmogorow, Tikhonow, Arnold.
+
+# frame:
+  # frametitle: Übersicht
+
+  # center:
+    \includegraphics[height = 7.5 cm]{maps/st_petersburg_location}
+
+# frame:
+  # frametitle: Übersicht
+  \centering
+  # tikzpicture:
+    \footnotesize
+    \begin{scope}[x = 8 cm, y = -0.5 cm]
+      \draw (18.25, -1.0) node[above] {1825} -- +(0, 7.5);
+      \draw (18.50, -1.0) node[above] {1850} -- +(0, 7.5);
+      \draw (18.75, -1.0) node[above] {1875} -- +(0, 7.5);
+      \draw (19.00, -1.0) node[above] {1900} -- +(0, 7.5);
+      \draw (19.25, -1.0) node[above] {1925} -- +(0, 7.5);
+      \draw (19.50, -1.0) node[above] {1950} -- +(0, 7.5);
+      \draw[fill, rounded corners = 0.08 cm] (18.21, 0.0) rectangle (18.94, 1.0);
+      \draw[fill, rounded corners = 0.08 cm] (18.56, 1.5) rectangle (19.22, 2.5);
+      \draw[fill, rounded corners = 0.08 cm] (18.57, 3.0) rectangle (19.18, 4.0);
+      \draw[fill, rounded corners = 0.08 cm] (18.63, 4.5) rectangle (19.45, 5.5);
+      \node[right, white] at (18.21, 0.5) {Tschebyschow};
+      \node[right, white] at (18.56, 2.0) {Markow};
+      \node[right, white] at (18.57, 3.5) {Ljapunow};
+      \node[right, white] at (18.63, 5.0) {Krylow};
+    \end{scope}
+
+# frame:
+  # frametitle: Übersicht
+  \centering
+  # tikzpicture:
+    \footnotesize
+    \node (cheb) at (0, 0) {\textbf{Tschebyschow}};
+    \node (mark) at (-3, -2) {\textbf{Markow}};
+    \node (lyap) at (0, -2) {\textbf{Ljapunow}};
+    \node (kork) at (3, -2) {Korkin};
+    \node (kryl) at (3, -4) {\textbf{Krylow}};
+
+    \draw[thick, -latex'] (cheb) -- (mark);
+    \draw[thick, -latex'] (cheb) -- (lyap);
+    \draw[thick, -latex'] (cheb) -- (kork);
+    \draw[thick, -latex'] (kork) -- (kryl);
